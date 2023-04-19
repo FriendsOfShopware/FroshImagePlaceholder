@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/trunk/src/Core/Framework/App/Manifest/Schema/manifest-2.0.xsd">
+    <meta>
+        <name>FroshImagePlaceholder</name>
+        <label>Representative image placeholder</label>
+        <label lang="de-DE">Platzhalter für repräsentative Bilder</label>
+        <description>A description</description>
+        <description lang="de-DE">Eine Beschreibung</description>
+        <author>Friends of Shopware</author>
+        <copyright>(c) by Friends of Shopware</copyright>
+        <version>0.0.1</version>
+        <icon>icon.png</icon>
+        <license>MIT</license>
+    </meta>
+    <custom-fields>
+        <custom-field-set>
+            <name>frosh_image_placeholder</name>
+            <label>FroshImagePlaceholder</label>
+            <label lang="de-DE">FroshImagePlaceholder</label>
+            <related-entities>
+                <media/>
+            </related-entities>
+            <fields>
+                <text name="frosh_image_placeholder_thumbhash">
+                    <position>1</position>
+                    <label>Thumbhash</label>
+                </text>
+            </fields>
+        </custom-field-set>
+    </custom-fields>
+    <permissions>
+        <read>media</read>
+        <create>media</create>
+        <update>media</update>
+    </permissions>
+</manifest>
