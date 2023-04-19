@@ -1,0 +1,30 @@
+{% sw_extends "@Storefront/storefront/utilities/thumbnail.html.twig" %}
+
+{% block thumbnail_utility %}
+    {% set thumbhash = media.customFields.frosh_image_placeholder_thumbhash %}
+
+    {% if thumbhash %}
+        {% set attributes = attributes ?: {} %}
+
+        {% if src is not defined %}
+            {% set src = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' %}
+        {% endif %}
+
+        {% set attributes = attributes|merge({
+            'data-thumbhash': thumbhash,
+            'loading': 'lazy',
+            'src': src,
+        }) %}
+
+        {% if attributes.class %}
+            {% set attributes = attributes|merge({'class': 'thumbhashloader ' ~ attributes.class}) %}
+        {% else %}
+            {% set attributes = attributes|merge({'class': 'thumbhashloader'}) %}
+        {% endif %}
+
+        {% set load = false %}
+    {% endif %}
+
+    {{ parent() }}
+
+{% endblock %}
