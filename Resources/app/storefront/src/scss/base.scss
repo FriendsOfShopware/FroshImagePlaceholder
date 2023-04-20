@@ -1,8 +1,8 @@
-.thumbhashloader {
-    width: 100%;
-    height: 100%;
+.thumbhashloader,.thumbhashloaded {
+    height: auto;
 }
 
 .product-image.is-standard.thumbhashloader {
-    object-fit: contain;
+    object-fit: revert;
+    max-width: max-content;
 }
