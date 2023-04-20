@@ -1,0 +1,20 @@
+name = "appserver"
+workers_dev = false
+main = "src/index.ts"
+compatibility_date = "2023-04-19"
+
+[[kv_namespaces]]
+    binding = "shopStorage"
+    id = "f2112b386a2b40119f21ce1b4c46e5f8"
+    preview_id = "f2112b386a2b40119f21ce1b4c46e5f8"
+
+[[queues.producers]]
+ queue = "IMAGE_QUEUE"
+ binding = "IMAGE_QUEUE"
+
+[[queues.consumers]]
+    queue = "IMAGE_QUEUE"
+    max_batch_size = 10
+    max_batch_timeout = 10
+    max_retries = 3
+    dead_letter_queue = "IMAGE_QUEUE"

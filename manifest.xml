@@ -2,6 +2,7 @@
 <manifest
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/trunk/src/Core/Framework/App/Manifest/Schema/manifest-2.0.xsd">
+
     <meta>
         <name>FroshImagePlaceholder</name>
         <label>Representative image placeholder</label>
@@ -32,7 +33,13 @@
     </custom-fields>
     <permissions>
         <read>media</read>
-        <create>media</create>
         <update>media</update>
     </permissions>
+    <setup>
+        <registrationUrl>http://127.0.0.1:8787/authorize</registrationUrl>
+        <secret>abcdefg111</secret>
+    </setup>
+    <webhooks>
+        <webhook name="media-written" url="http://127.0.0.1:8787/event/media-uploaded" event="media.written"/>
+    </webhooks>
 </manifest>
