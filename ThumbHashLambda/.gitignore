@@ -1,0 +1,11 @@
+
+# Devenv
+.devenv*
+.direnv
+devenv.local.nix
+
+
+
+# Added by cargo
+
+/target
