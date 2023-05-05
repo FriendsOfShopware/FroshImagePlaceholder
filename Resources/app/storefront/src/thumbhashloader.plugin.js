@@ -26,6 +26,8 @@ export default class ThumbhashloaderPlugin extends Plugin {
     }
 
     load(image, thumbhashstring) {
+        image.parentNode.classList.add('thumbhashloader-container');
+
         const img = new Image();
         img.onload = function () {
             image.src = img.src;
@@ -44,6 +46,7 @@ export default class ThumbhashloaderPlugin extends Plugin {
                     }
 
                     image.classList.remove('thumbhashloader');
+                    image.parentNode.classList.remove('thumbhashloader-container');
                     image.classList.add('thumbhashloaded');
                     image.style.width = null;
                     image.style.height = null;
