@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "shopware-app-server-sdk": "^0.0.15",
-    "wrangler": "^3.1.1"
+    "wrangler": "^3.19.0"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20230214.0",
